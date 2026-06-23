@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Azra Vatansever — Work</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@80..125,300..950&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --red:#A5313D;
+      --olive:#8F8B41;
+      --plum:#4F2334;
+      --peach:#FAB69A;
+      --paper:#fff1e7;
+      --cream:#fff8f3;
+      --ink:#4F2334;
+      --muted:rgba(79,35,52,.66);
+      --line:rgba(79,35,52,.15);
+      --glass:rgba(255,255,255,.38);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:'Archivo',sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 50% -10%,rgba(250,182,154,.95),transparent 34%),
+        radial-gradient(circle at 100% 18%,rgba(165,49,61,.22),transparent 32%),
+        radial-gradient(circle at 0% 82%,rgba(143,139,65,.18),transparent 32%),
+        linear-gradient(180deg,#fff6ef 0%,#FAB69A 45%,#fff2ea 100%);
+      overflow-x:hidden;
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:9999;
+      opacity:.045;
+      mix-blend-mode:multiply;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 260 260' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    a{color:inherit;text-decoration:none}
+    ::selection{background:var(--red);color:#fff}
+
+    .site-nav{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:1000;
+      padding:18px 0;
+      background:rgba(255,246,239,.88);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(79,35,52,.1);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:-.055em;
+      line-height:1;
+    }
+
+    .brand img{
+      width:38px;
+      height:38px;
+      object-fit:contain;
+    }
+
+    .nav-menu{
+      display:flex;
+      justify-content:flex-end;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    .nav-menu a{
+      font-size:.7rem;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      padding:10px 13px;
+      border-radius:999px;
+      color:rgba(79,35,52,.68);
+      border:1px solid transparent;
+      transition:.24s ease;
+    }
+
+    .nav-menu a:hover{
+      color:var(--plum);
+      background:rgba(255,255,255,.55);
+      border-color:rgba(79,35,52,.12);
+    }
+
+    .work-hero{
+      min-height:100svh;
+      padding:145px 0 90px;
+      position:relative;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+    }
+
+    .hero-frame{
+      position:absolute;
+      inset:96px 24px 24px;
+      border:1px solid rgba(79,35,52,.13);
+      border-radius:36px;
+      pointer-events:none;
+      overflow:hidden;
+    }
+
+    .hero-frame::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(79,35,52,.045) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(79,35,52,.045) 1px,transparent 1px);
+      background-size:64px 64px;
+      mask-image:radial-gradient(circle at center,#000 0 42%,transparent 74%);
+    }
+
+    .hero-frame::after{
+      content:"";
+      position:absolute;
+      left:50%;
+      top:46%;
+      transform:translate(-50%,-50%);
+      width:min(62vmin,620px);
+      height:min(62vmin,620px);
+      border-radius:50%;
+      border:1px solid rgba(79,35,52,.14);
+      box-shadow:0 0 0 70px rgba(250,182,154,.25),0 0 0 140px rgba(165,49,61,.045);
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:3;
+      display:grid;
+      grid-template-columns:1fr .85fr;
+      gap:40px;
+      align-items:end;
+    }
+
+    .kicker{
+      font-size:.72rem;
+      font-weight:950;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:18px;
+    }
+
+    .hero-title{
+      margin:0;
+      font-size:clamp(4rem,10vw,10.5rem);
+      line-height:.82;
+      letter-spacing:-.095em;
+      text-transform:uppercase;
+      font-weight:950;
+      font-variation-settings:'wdth' 108;
+    }
+
+    .serif{
+      font-family:'Instrument Serif',serif;
+      font-style:italic;
+      font-weight:400;
+      text-transform:none;
+      letter-spacing:-.055em;
+      color:var(--red);
+    }
+
+    .hero-copy{
+      max-width:760px;
+      margin-top:28px;
+      color:var(--muted);
+      line-height:1.75;
+      font-weight:540;
+      font-size:1.05rem;
+    }
+
+    .hero-panel{
+      border-radius:34px;
+      background:rgba(255,255,255,.42);
+      border:1px solid rgba(79,35,52,.13);
+      backdrop-filter:blur(18px);
+      box-shadow:0 25px 80px rgba(79,35,52,.09);
+      padding:28px;
+      min-height:390px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-panel::before{
+      content:"";
+      position:absolute;
+      width:260px;
+      height:260px;
+      border-radius:50%;
+      right:-90px;
+      top:-90px;
+      background:var(--red);
+      opacity:.12;
+    }
+
+    .hero-panel-top{
+      position:relative;
+      z-index:2;
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      align-items:flex-start;
+    }
+
+    .hero-panel small{
+      font-size:.65rem;
+      font-weight:950;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:var(--red);
+    }
+
+    .count{
+      font-size:clamp(4.4rem,8vw,7.4rem);
+      line-height:.75;
+      font-weight:950;
+      letter-spacing:-.1em;
+    }
+
+    .hero-thumbs{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      align-items:end;
+    }
+
+    .hero-thumb{
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(79,35,52,.13);
+      background:rgba(255,255,255,.45);
+      box-shadow:0 18px 44px rgba(79,35,52,.12);
+      transition:.28s ease;
+    }
+
+    .hero-thumb:nth-child(1){height:150px;transform:rotate(-5deg)}
+    .hero-thumb:nth-child(2){height:205px;transform:translateY(-18px) rotate(3deg)}
+    .hero-thumb:nth-child(3){height:168px;transform:rotate(6deg)}
+
+    .hero-thumb:hover{
+      transform:translateY(-12px) rotate(0deg) scale(1.04);
+    }
+
+    .hero-thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .section{
+      padding:105px 0;
+      position:relative;
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:28px;
+      margin-bottom:42px;
+    }
+
+    .section-label{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      font-size:.68rem;
+      font-weight:950;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:18px;
+    }
+
+    .section-label::before{
+      content:"";
+      width:42px;
+      height:1px;
+      background:var(--red);
+    }
+
+    .section-title{
+      margin:0;
+      font-size:clamp(2.8rem,6vw,6.6rem);
+      line-height:.9;
+      letter-spacing:-.085em;
+      text-transform:uppercase;
+      font-weight:950;
+      font-variation-settings:'wdth' 108;
+    }
+
+    .section-note{
+      max-width:470px;
+      color:var(--muted);
+      line-height:1.7;
+      font-weight:540;
+      margin:0;
+    }
+
+    .filter-strip{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:30px;
+    }
+
+    .filter-chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:11px 15px;
+      border-radius:999px;
+      background:rgba(255,255,255,.42);
+      border:1px solid rgba(79,35,52,.13);
+      backdrop-filter:blur(14px);
+      color:rgba(79,35,52,.72);
+      font-size:.66rem;
+      font-weight:950;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .filter-chip.active{
+      background:var(--plum);
+      color:white;
+      border-color:var(--plum);
+    }
+
+    .featured-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+
+    .feature-card{
+      border-radius:38px;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(79,35,52,.13);
+      box-shadow:0 42px 110px rgba(79,35,52,.18);
+      isolation:isolate;
+      background:rgba(255,255,255,.42);
+    }
+
+    .feature-card img,
+    .feature-card video{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:contain;
+      transform:scale(1.01);
+      transition:.7s ease;
+    }
+
+    .feature-card:hover img,
+    .feature-card:hover video{
+      transform:scale(1.035);
+    }
+
+    .feature-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:2;
+      background:linear-gradient(180deg,rgba(79,35,52,0) 38%,rgba(79,35,52,.82) 100%);
+      pointer-events:none;
+    }
+
+    .feature-card::after{
+      content:"";
+      position:absolute;
+      inset:18px;
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:28px;
+      z-index:3;
+      pointer-events:none;
+    }
+
+    .feature-content{
+      position:absolute;
+      z-index:4;
+      left:28px;
+      right:28px;
+      bottom:28px;
+      color:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:20px;
+    }
+
+    .feature-content small{
+      display:block;
+      margin-bottom:10px;
+      font-size:.62rem;
+      font-weight:950;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.72);
+    }
+
+    .feature-content h3{
+      margin:0;
+      font-size:clamp(2.4rem,5vw,5.4rem);
+      line-height:.86;
+      letter-spacing:-.09em;
+      text-transform:uppercase;
+      font-weight:950;
+    }
+
+    .feature-number{
+      width:72px;
+      height:72px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(255,255,255,.32);
+      background:rgba(255,255,255,.12);
+      backdrop-filter:blur(14px);
+      font-size:.78rem;
+      font-weight:950;
+      letter-spacing:.1em;
+    }
+
+    .side-feature{
+      display:grid;
+      gap:18px;
+    }
+
+    .marquee{
+      overflow:hidden;
+      padding:24px 0;
+      border-top:1px solid rgba(79,35,52,.1);
+      border-bottom:1px solid rgba(79,35,52,.1);
+      background:rgba(255,255,255,.28);
+    }
+
+    .marquee-track{
+      display:flex;
+      width:max-content;
+      gap:28px;
+      animation:move 36s linear infinite;
+    }
+
+    .marquee-track span{
+      font-size:clamp(2rem,4vw,4.7rem);
+      line-height:1;
+      font-weight:950;
+      letter-spacing:-.095em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .marquee-track em{
+      font-family:'Instrument Serif',serif;
+      color:var(--red);
+      font-style:italic;
+      font-weight:400;
+      text-transform:none;
+    }
+
+    @keyframes move{
+      to{transform:translateX(-50%)}
+    }
+
+    .work-gallery{
+      columns:3 280px;
+      column-gap:18px;
+    }
+
+    .work-card{
+      break-inside:avoid;
+      display:block;
+      margin:0 0 18px;
+      position:relative;
+      overflow:hidden;
+      border-radius:34px;
+      background:rgba(255,255,255,.42);
+      border:1px solid rgba(79,35,52,.13);
+      box-shadow:0 26px 80px rgba(79,35,52,.10);
+      isolation:isolate;
+      transition:.34s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .work-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 38px 110px rgba(79,35,52,.17);
+    }
+
+    .work-card img{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:contain;
+    }
+
+    .work-card.is-portrait{
+      border-radius:38px;
+    }
+
+    .work-card.is-landscape{
+      border-radius:30px;
+    }
+
+    .work-card.is-square{
+      border-radius:34px;
+    }
+
+    .work-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:2;
+      background:linear-gradient(180deg,rgba(79,35,52,0) 48%,rgba(79,35,52,.78) 100%);
+      pointer-events:none;
+    }
+
+    .work-card::after{
+      content:"";
+      position:absolute;
+      inset:12px;
+      border:1px solid rgba(255,255,255,.24);
+      border-radius:24px;
+      z-index:3;
+      pointer-events:none;
+    }
+
+    .work-caption{
+      position:absolute;
+      left:22px;
+      right:22px;
+      bottom:22px;
+      z-index:4;
+      color:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:14px;
+    }
+
+    .work-caption strong{
+      display:block;
+      font-size:1.15rem;
+      line-height:.98;
+      letter-spacing:-.055em;
+      text-transform:uppercase;
+      font-weight:950;
+    }
+
+    .work-caption small{
+      font-size:.58rem;
+      font-weight:950;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.7);
+      white-space:nowrap;
+    }
+
+    .video-section{
+      padding:110px 0;
+    }
+
+    .video-card{
+      position:relative;
+      border-radius:42px;
+      overflow:hidden;
+      border:1px solid rgba(79,35,52,.13);
+      background:var(--plum);
+      box-shadow:0 42px 120px rgba(79,35,52,.22);
+      isolation:isolate;
+    }
+
+    .video-card video{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:contain;
+    }
+
+    .video-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:2;
+      background:
+        linear-gradient(90deg,rgba(79,35,52,.86) 0%,rgba(79,35,52,.25) 50%,rgba(79,35,52,.72) 100%);
+      pointer-events:none;
+    }
+
+    .video-info{
+      position:absolute;
+      z-index:3;
+      left:34px;
+      right:34px;
+      bottom:34px;
+      color:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:24px;
+    }
+
+    .video-info h2{
+      margin:0;
+      font-size:clamp(3rem,7vw,7.4rem);
+      line-height:.84;
+      letter-spacing:-.095em;
+      text-transform:uppercase;
+      font-weight:950;
+    }
+
+    .video-info p{
+      max-width:360px;
+      margin:0;
+      color:rgba(255,255,255,.72);
+      line-height:1.65;
+      font-weight:520;
+    }
+
+    .next-panel{
+      margin-top:80px;
+      border-radius:38px;
+      padding:44px;
+      background:rgba(255,255,255,.42);
+      border:1px solid rgba(79,35,52,.13);
+      backdrop-filter:blur(18px);
+      box-shadow:0 28px 90px rgba(79,35,52,.1);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:30px;
+    }
+
+    .next-panel h2{
+      margin:0;
+      font-size:clamp(2.3rem,5vw,5.4rem);
+      line-height:.9;
+      letter-spacing:-.085em;
+      text-transform:uppercase;
+      font-weight:950;
+    }
+
+    .btn-work{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:999px;
+      padding:15px 22px;
+      border:1px solid var(--plum);
+      background:var(--plum);
+      color:white;
+      font-size:.72rem;
+      font-weight:950;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      transition:.24s ease;
+      white-space:nowrap;
+    }
+
+    .btn-work:hover{
+      transform:translateY(-4px);
+      box-shadow:0 18px 42px rgba(79,35,52,.18);
+      color:white;
+      background:var(--red);
+      border-color:var(--red);
+    }
+
+    footer{
+      padding:34px 0;
+      border-top:1px solid rgba(79,35,52,.12);
+      color:rgba(79,35,52,.56);
+      font-size:.68rem;
+      font-weight:900;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:1100px){
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-panel{
+        min-height:330px;
+      }
+
+      .featured-grid{
+        grid-template-columns:1fr;
+      }
+
+      .side-feature{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .work-gallery{
+        columns:2 260px;
+        column-gap:16px;
+      }
+    }
+
+    @media(max-width:768px){
+      .container{
+        padding-left:18px;
+        padding-right:18px;
+      }
+
+      .site-nav{
+        position:sticky;
+        padding:12px 0 10px;
+      }
+
+      .site-nav .row{
+        gap:10px;
+      }
+
+      .brand img{
+        width:32px;
+        height:32px;
+      }
+
+      .brand span{
+        font-size:.88rem;
+      }
+
+      .nav-menu{
+        justify-content:flex-start;
+        gap:6px;
+        overflow-x:auto;
+        flex-wrap:nowrap;
+        padding-bottom:4px;
+        scrollbar-width:none;
+      }
+
+      .nav-menu::-webkit-scrollbar{
+        display:none;
+      }
+
+      .nav-menu a{
+        flex:0 0 auto;
+        font-size:.56rem;
+        padding:8px 10px;
+        background:rgba(255,255,255,.46);
+        border-color:rgba(79,35,52,.08);
+      }
+
+      .work-hero{
+        min-height:auto;
+        padding:52px 0 62px;
+      }
+
+      .hero-frame{
+        inset:14px 10px 10px;
+        border-radius:26px;
+      }
+
+      .hero-title{
+        font-size:clamp(3.2rem,17vw,5.2rem);
+      }
+
+      .hero-copy{
+        font-size:.98rem;
+        line-height:1.62;
+      }
+
+      .hero-panel{
+        border-radius:28px;
+        padding:22px;
+        min-height:280px;
+      }
+
+      .hero-thumb:nth-child(1){height:118px}
+      .hero-thumb:nth-child(2){height:150px}
+      .hero-thumb:nth-child(3){height:128px}
+
+      .section{
+        padding:68px 0;
+      }
+
+      .section-head{
+        display:block;
+      }
+
+      .section-title{
+        font-size:clamp(2.5rem,12vw,3.9rem);
+      }
+
+      .section-note{
+        margin-top:18px;
+        font-size:.94rem;
+      }
+
+      .featured-grid{
+        gap:14px;
+      }
+
+      .feature-card{
+        border-radius:28px;
+      }
+
+      .side-feature{
+        grid-template-columns:1fr;
+        gap:14px;
+      }
+
+      .feature-content{
+        left:16px;
+        right:16px;
+        bottom:16px;
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .feature-content h3{
+        font-size:2.6rem;
+      }
+
+      .feature-number{
+        width:58px;
+        height:58px;
+      }
+
+      .work-gallery{
+        columns:1;
+      }
+
+      .work-card{
+        margin-bottom:16px;
+        border-radius:26px;
+      }
+
+      .work-card:hover{
+        transform:none;
+      }
+
+      .work-card::after{
+        inset:9px;
+        border-radius:18px;
+      }
+
+      .work-caption{
+        left:14px;
+        right:14px;
+        bottom:14px;
+        padding:12px 14px;
+        border-radius:18px;
+        background:linear-gradient(135deg,rgba(79,35,52,.86),rgba(79,35,52,.42));
+        backdrop-filter:blur(14px);
+        flex-direction:column;
+        align-items:flex-start;
+        gap:5px;
+      }
+
+      .work-caption strong{
+        font-size:.95rem;
+      }
+
+      .work-caption small{
+        font-size:.52rem;
+      }
+
+      .video-section{
+        padding:70px 0;
+      }
+
+      .video-card{
+        border-radius:28px;
+      }
+
+      .video-info{
+        left:18px;
+        right:18px;
+        bottom:18px;
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .video-info h2{
+        font-size:3rem;
+      }
+
+      .video-info p{
+        font-size:.92rem;
+        line-height:1.5;
+      }
+
+      .next-panel{
+        margin-top:55px;
+        padding:28px;
+        border-radius:30px;
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .btn-work{
+        width:100%;
+      }
+
+      footer{
+        font-size:.58rem;
+        line-height:1.5;
+      }
+    }
+
+    @media(max-width:390px){
+      .container{
+        padding-left:14px;
+        padding-right:14px;
+      }
+
+      .hero-title{
+        font-size:3rem;
+      }
+
+      .section-title{
+        font-size:2.35rem;
+      }
+
+      .filter-chip{
+        font-size:.55rem;
+        padding:9px 11px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="site-nav">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5">
+          <a href="index.html" class="brand">
+            <img src="foto/logo.jpg" onerror="this.onerror=null;this.src='foto/logo.png'" alt="Azra Vatansever logo">
+            <span>Azra Vatansever</span>
+          </a>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="#featured">Featured</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#motion">Motion</a>
+            <a href="#top">Top</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="work-hero" id="top">
+    <div class="hero-frame"></div>
+
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker">Selected Portfolio / 21 Images + 1 Motion Piece</div>
+          <h1 class="hero-title">Curated <span class="serif">visual</span><br>archive.</h1>
+          <p class="hero-copy">
+            A focused collection of visual identity, packaging, editorial, illustration, mockup,
+            campaign and experimental design works. The layout is built like a digital exhibition:
+            large, clean, confident and image-led.
+          </p>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="hero-panel-top">
+            <small>Work Index</small>
+            <div class="count">22</div>
+          </div>
+
+          <div class="hero-thumbs">
+            <a href="#gallery" class="hero-thumb">
+              <img src="foto/work-1.jpg" alt="Portfolio preview 1">
+            </a>
+            <a href="#gallery" class="hero-thumb">
+              <img src="foto/work-2.jpg" alt="Portfolio preview 2">
+            </a>
+            <a href="#gallery" class="hero-thumb">
+              <img src="foto/work-3.jpg" alt="Portfolio preview 3">
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="section-label">Featured Projects</div>
+          <h2 class="section-title">First impact<br><span class="serif">matters.</span></h2>
+        </div>
+
+        <p class="section-note">
+          These larger frames create a stronger opening. The image ratio is respected, so vertical,
+          horizontal and square works can sit naturally inside the layout.
+        </p>
+      </div>
+
+      <div class="filter-strip">
+        <span class="filter-chip active">All Works</span>
+        <span class="filter-chip">Branding</span>
+        <span class="filter-chip">Packaging</span>
+        <span class="filter-chip">Editorial</span>
+        <span class="filter-chip">Illustration</span>
+        <span class="filter-chip">Mockup</span>
+      </div>
+
+      <div class="featured-grid">
+        <article class="feature-card">
+          <img src="foto/work-1.jpg" alt="Featured portfolio work 01">
+          <div class="feature-content">
+            <div>
+              <small>Featured / 01</small>
+              <h3>Visual<br>Identity</h3>
+            </div>
+            <div class="feature-number">01</div>
+          </div>
+        </article>
+
+        <div class="side-feature">
+          <article class="feature-card">
+            <img src="foto/work-2.jpg" alt="Featured portfolio work 02">
+            <div class="feature-content">
+              <div>
+                <small>Featured / 02</small>
+                <h3>Packaging</h3>
+              </div>
+              <div class="feature-number">02</div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <img src="foto/work-3.jpg" alt="Featured portfolio work 03">
+            <div class="feature-content">
+              <div>
+                <small>Featured / 03</small>
+                <h3>Campaign</h3>
+              </div>
+              <div class="feature-number">03</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Branding <em>/</em> Packaging <em>/</em> Editorial <em>/</em> Visual Identity <em>/</em> Mockups <em>/</em></span>
+      <span>Branding <em>/</em> Packaging <em>/</em> Editorial <em>/</em> Visual Identity <em>/</em> Mockups <em>/</em></span>
+    </div>
+  </div>
+
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="section-label">Full Gallery</div>
+          <h2 class="section-title">Twenty one<br><span class="serif">still works.</span></h2>
+        </div>
+
+        <p class="section-note">
+          Put your images inside the <strong>foto</strong> folder and name them from
+          <strong>work-1.jpg</strong> to <strong>work-21.jpg</strong>. The gallery adapts to each image size.
+        </p>
+      </div>
+
+      <div class="work-gallery">
+        <article class="work-card"><img src="foto/work-1.jpg" alt="Portfolio work 01"><div class="work-caption"><strong>Project 01</strong><small>Identity</small></div></article>
+        <article class="work-card"><img src="foto/work-2.jpg" alt="Portfolio work 02"><div class="work-caption"><strong>Project 02</strong><small>Packaging</small></div></article>
+        <article class="work-card"><img src="foto/work-3.jpg" alt="Portfolio work 03"><div class="work-caption"><strong>Project 03</strong><small>Campaign</small></div></article>
+        <article class="work-card"><img src="foto/work-4.jpg" alt="Portfolio work 04"><div class="work-caption"><strong>Project 04</strong><small>Identity</small></div></article>
+        <article class="work-card"><img src="foto/work-5.jpg" alt="Portfolio work 05"><div class="work-caption"><strong>Project 05</strong><small>Packaging</small></div></article>
+        <article class="work-card"><img src="foto/work-6.jpg" alt="Portfolio work 06"><div class="work-caption"><strong>Project 06</strong><small>Poster</small></div></article>
+        <article class="work-card"><img src="foto/work-7.jpg" alt="Portfolio work 07"><div class="work-caption"><strong>Project 07</strong><small>Print</small></div></article>
+        <article class="work-card"><img src="foto/work-8.jpg" alt="Portfolio work 08"><div class="work-caption"><strong>Project 08</strong><small>Editorial</small></div></article>
+        <article class="work-card"><img src="foto/work-9.jpg" alt="Portfolio work 09"><div class="work-caption"><strong>Project 09</strong><small>Campaign</small></div></article>
+        <article class="work-card"><img src="foto/work-10.jpg" alt="Portfolio work 10"><div class="work-caption"><strong>Project 10</strong><small>Mockup</small></div></article>
+        <article class="work-card"><img src="foto/work-11.jpg" alt="Portfolio work 11"><div class="work-caption"><strong>Project 11</strong><small>Social</small></div></article>
+        <article class="work-card"><img src="foto/work-12.jpg" alt="Portfolio work 12"><div class="work-caption"><strong>Project 12</strong><small>Layout</small></div></article>
+        <article class="work-card"><img src="foto/work-13.jpg" alt="Portfolio work 13"><div class="work-caption"><strong>Project 13</strong><small>Poster</small></div></article>
+        <article class="work-card"><img src="foto/work-14.jpg" alt="Portfolio work 14"><div class="work-caption"><strong>Project 14</strong><small>Branding</small></div></article>
+        <article class="work-card"><img src="foto/work-15.jpg" alt="Portfolio work 15"><div class="work-caption"><strong>Project 15</strong><small>Visual</small></div></article>
+        <article class="work-card"><img src="foto/work-16.jpg" alt="Portfolio work 16"><div class="work-caption"><strong>Project 16</strong><small>Campaign</small></div></article>
+        <article class="work-card"><img src="foto/work-17.jpg" alt="Portfolio work 17"><div class="work-caption"><strong>Project 17</strong><small>Packaging</small></div></article>
+        <article class="work-card"><img src="foto/work-18.jpg" alt="Portfolio work 18"><div class="work-caption"><strong>Project 18</strong><small>Type</small></div></article>
+        <article class="work-card"><img src="foto/work-19.jpg" alt="Portfolio work 19"><div class="work-caption"><strong>Project 19</strong><small>Illustration</small></div></article>
+        <article class="work-card"><img src="foto/work-20.jpg" alt="Portfolio work 20"><div class="work-caption"><strong>Project 20</strong><small>Mockup</small></div></article>
+        <article class="work-card"><img src="foto/work-21.jpg" alt="Portfolio work 21"><div class="work-caption"><strong>Project 21</strong><small>Final Piece</small></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section" id="motion">
+    <div class="container">
+      <div class="video-card">
+        <video src="foto/video.mp4" autoplay muted loop playsinline controls></video>
+
+        <div class="video-info">
+          <div>
+            <div class="kicker">Motion / Video Work</div>
+            <h2>Moving<br><span class="serif">image.</span></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="next-panel">
+        <h2>Back to<br><span class="serif">main identity.</span></h2>
+        <a href="index.html" class="btn-work">
+          Return Home
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container d-flex justify-content-between flex-wrap gap-3">
+      <span>Azra Vatansever — Selected Works</span>
+      <span>21 Images / 1 Video / Portfolio Archive</span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".work-card img, .feature-card img").forEach(function(img){
+      function detectRatio(){
+        const card = img.closest(".work-card, .feature-card");
+        if(!card) return;
+
+        const w = img.naturalWidth;
+        const h = img.naturalHeight;
+
+        if(!w || !h) return;
+
+        card.classList.remove("is-portrait", "is-landscape", "is-square");
+
+        const ratio = w / h;
+
+        if(ratio > 1.18){
+          card.classList.add("is-landscape");
+        }else if(ratio < 0.82){
+          card.classList.add("is-portrait");
+        }else{
+          card.classList.add("is-square");
+        }
+      }
+
+      if(img.complete){
+        detectRatio();
+      }else{
+        img.addEventListener("load", detectRatio);
+      }
+    });
+  </script>
+</body>
+</html>
